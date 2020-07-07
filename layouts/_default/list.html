@@ -1,0 +1,211 @@
+<html>
+<!-- <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head> -->
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/navigate_tab.js"></script>
+
+<head>
+
+    <div class="header">
+        <a href="#default" class="logo">
+            CargoAI
+            <!-- <img alt="Qries" src="css/cargoai_logo.png" width=150" height="70"> -->
+        </a>
+        {{range .Pages}}
+        <div class="header-right">
+            <a href={{.URL}}> {{.Title}}</a>
+            <!-- <a class="active">Forwarders</a>
+            <a href="#airlines">Airlines</a>
+            <a href="#feature">Feature</a>
+            <a href="#contact">Pricing</a>
+            <a href="#about">About Us</a> -->
+        </div>
+        {{end}}
+    </div>
+</head>
+
+<body onload="openPage('tab1', this, '#ffffff')">
+    <!-- {{.Content}}
+     {{range .Pages}}
+    {{.Title}} <br>
+    {{end}}  -->
+
+    <div class="row">
+        <div class="column">
+            <!-- <img src="css/web_app_bids.png"    style="width:100%"> -->
+            <div class="row">
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    {{.Params.intro_title}}</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.intro}}</p>
+            </div>
+        </div>
+        <div class="column">
+            <img class="bids_image" src="css/web_app_bids.png" style="width:100%">
+        </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="row">
+        <div class="card_column">
+            <div class="card">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke-width="3" fill="#f1f1f1" />
+                </svg>
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    Find the best price</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.feature_1}}</p>
+            </div>
+        </div>
+        <div class="card_column">
+            <div class="card">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke-width="3" fill="#f1f1f1" />
+                </svg>
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    Advanced Analytics</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.feature_2}}</p>
+            </div>
+        </div>
+        <div class="card_column">
+            <div class="card">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke-width="3" fill="#f1f1f1" />
+                </svg>
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    Dynamic Messaging</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.feature_3}}</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div style="margin-left: 10%; margin-right: 10%;">
+        <button class="tablink" onclick="openPage('tab1', this, '#ffffff')">Instantly Search</button>
+        <button class="tablink" onclick="openPage('tab2', this, '#ffffff')" id="defaultOpen">Bid for the Best
+            Price</button>
+        <button class="tablink" onclick="openPage('tab3', this, '#ffffff')">Filter on Quality</button>
+        <button class="tablink" onclick="openPage('tab4', this, '#ffffff')">Track and Trace</button>
+
+        <div id="tab1" class="tabcontent">
+            <div class="row">
+                <div class="column">
+                    <!-- <img src="css/web_app_bids.png"    style="width:100%"> -->
+                    <div class="row">
+                        <p style="width:100% ; font-family:'Montserrat' ">
+                            <li>Search better with three distinct options. Whether your shipment is adhoc, allotment or
+                                if you want to negotiate rates for the season- it is all in one place in CargoAI. </li>
+                            <br>
+                            <li>The results page is dynamic and constantly evolving to better bit a forwarders search.
+                            </li>
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img class="bids_image" src="images/search.png" style="width:100%">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="tab2" class="tabcontent">
+            <div class="row">
+                <div class="column">
+                    <!-- <img src="css/web_app_bids.png"    style="width:100%"> -->
+                    <div class="row">
+                        <p style="width:100% ; font-family:'Montserrat' ">
+                            <li>Place multiple bids at once on a variety of airlines and routes </li>
+                            <li>Organize bids based on quality rating and response time. Both airlines and forwarders
+                                can organize their bids in their bid status based on the urgency of the response. </li>
+                            <li>Machine learning can suggest bids based on the current trends and previous bids placed
+                            </li>
+                            <li>Easy tool to manage and store negotiated rate</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img class="bids_image" src="images/multiple_bid.png" style="width:100%">
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="tab3" class="tabcontent">
+            <div class="row">
+                <div class="column">
+                    <!-- <img src="css/web_app_bids.png"    style="width:100%"> -->
+                    <div class="row">
+                        <p style="width:100% ; font-family:'Montserrat' ">
+                            <li>Transparency is the principle feature of the results so you’ll not only see the time,
+                                duration and price of a route but the response rating, quality rating and the estimated
+                                delay.</li>
+                            <li>Filter not only in your search but organize your placed bids by quality as well. </li>
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img class="bids_image" src="images/quality.png" style="width:100%">
+                </div>
+
+            </div>
+        </div>
+
+        <div id="tab4" class="tabcontent">
+            <div class="row">
+                <div class="column">
+                    <!-- <img src="css/web_app_bids.png"    style="width:100%"> -->
+                    <div class="row">
+                        <p style="width:100% ; font-family:'Montserrat' ">
+                            <li>Track your shipment from its bid status to when it is actually in route on the flight.
+                                See its progress hour by hour, when it stops and when it takes off. </li>
+                            <li>Estimated delays are factored into the estimated time of arrival. When your shipment is
+                                due to arrive you can report if it was delayed or damaged and you’ll know next time you
+                                book a shipment. </li>
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img class="bids_image" src="images/track.png" style="width:100%">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div class="row">
+        <div style="width:45%;float: left;  padding: 2.5%; ">
+            <div class="card">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke-width="3" fill="#f1f1f1" />
+                </svg>
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    Advanced Analytics</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.feature_1}}</p>
+            </div>
+        </div>
+        <div style="width:45%;float: left;  padding: 2.5%; ">
+            <div class="card">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke-width="3" fill="#f1f1f1" />
+                </svg>
+                <p style="width:100% ; font-family:'Montserrat' ;font-size:25px  ; font-weight: bold; color:#790089">
+                    News</p>
+                <p style="width:100% ; font-family:'Montserrat' ">{{.Params.feature_2}}</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
